@@ -9,8 +9,6 @@ const sendMessageToChatbot = async (message) => {
       model: 'mistral-small', 
       messages: [{ role: 'user', content: message }],
     });
-    console.log(`Running in ${config.environment} mode`);
-    console.log(`Using Mistral API at ${config.mistralApiUrl}`);
     return response.choices[0].message.content;
   } catch (error) {
     console.error('Detailed error:', error);

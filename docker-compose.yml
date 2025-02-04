@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  chatbot:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+      - MISTRAL_API_KEY_DEV=${MISTRAL_API_KEY_DEV}
+    volumes:
+      - ./backend:/app/backend
+      - ./frontend:/app/frontend
+      - /app/backend/node_modules
+    restart: unless-stopped

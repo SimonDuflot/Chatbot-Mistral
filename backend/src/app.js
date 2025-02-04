@@ -48,4 +48,12 @@ process.on('unhandledRejection', (err) => {
   });
 });
 
+// Serve static files from frontend directory
+app.use(express.static(path.join(__dirname, '../../frontend')));
+
+// Fallback route to serve index.html for SPA-like behavior
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../../frontend/index.html'));
+});
+
 export default app;
