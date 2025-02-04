@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+
+	<head>
+		<title>Robot Chatbot - SD</title>
+		<link rel="stylesheet" href="index.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+	</head>
+
+	<body>
+		<main>
+			<section class="chatbot-container">
+				<div class="chatbot-header">
+					<img src="images/nullos.png" class="logo">
+					<h1>Simon Duflot Robot Assistant</h1>
+					<h2>Ask me anything about Simon Duflot (he is a great guy)!</h2>
+				</div>
+				<div class="chatbot-conversation-container" id="chatbot-conversation">
+					<div class="speech speech-ai">
+						How can I help you?
+					</div>
+				</div>
+				<form id="form" class="chatbot-input-container">
+					<input name="user-input" type="text" id="user-input" required>
+					<button id="submit-btn" class="submit-btn" style="background-color:white;">
+						<img 
+							src="images/icon-send.png" 
+							class="send-btn-icon"
+							
+						>
+					</button>
+				</form>
+			</section>
+		</main>
+		<script type="module" src="index.js"></script>
+	</body>
+
+</html>
