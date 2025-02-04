@@ -1,0 +1,84 @@
+{
+    "overview" : "Mes expériences m’ont permis de saisir toute la dimension du métier de développeur : bien plus que du codage, il s’agit avant tout de répondre aux besoins métiers. Cela implique de comprendre les attentes des utilisateurs, de traduire ces besoins en solutions techniques, et de faciliter la communication entre les différents acteurs (développeurs, analystes, chefs de projet, etc.). En somme, développer, c’est créer un pont entre le technique et le fonctionnel, en veillant à ce que chaque partie prenante dispose des informations nécessaires pour avancer efficacement.",
+    "personalInfo": {
+      "name": "Simon DUFLOT",
+      "email": "simon.duflot@proton.me",
+      "phone": "+ 33642671849",
+      "linkedin": "https://www.linkedin.com/in/simon-duflot/",
+      "adress": "260 Rue du Faubourg Saint Martin, 75010, Paris"
+    },
+    "education": [
+      {
+        "institution": "Ecole de la Qualité Logicielle",
+        "degree": "Full Stack Java Developer",
+        "period": "2024 – 2025"
+      },
+      {
+        "institution": "Kedge Business School",
+        "degree": "Master's in International Business",
+        "period": "2013 – 2019"
+      },
+      {
+        "institution": "Dublin Business School",
+        "degree": "Sales Management",
+        "period": "2017"
+      }
+    ],
+    "technicalSkills": {
+      "languages": ["Java EE", "Spring", "Javascript", "React", "SQL", "HTML/CSS", "XML"],
+      "tools": ["Intellij", "vs code", "git", "vim"],
+      "methodologies": ["Agile", "Object-oriented analysis", "UML modeling"]
+    },
+    "softSkills": [
+      "Algorithms",
+      "Project management",
+      "Communication",
+      "Teamwork",
+      "Diplomatic",
+      "Curious",
+      "Autonomous"
+    ],
+    "languageSkills": {
+      "English": "Fluent",
+      "French": "Native"
+    },
+    "workExperience": [
+      {
+        "title": "Clerk",
+        "company": "Boulangerie Sain",
+        "location": "PARIS 10th",
+        "period": "02/2023 – 05/2023",
+        "responsibilities": [
+          "Responsibility of the sales area",
+          "Optimization of customer relationship management",
+          "Stock management"
+        ]
+      },
+      {
+        "title": "Fruit & vegetable Manager",
+        "company": "Biocoop",
+        "location": "AIX-EN-PROVENCE",
+        "period": "03/2021 – 02/2022",
+        "responsibilities": [
+          "Implementation of KPI tracking system",
+          "Achieved +15% margin on €35,000 monthly turnover",
+          "Liaison between teams, management, and producers",
+          "Training of new employees",
+          "Stock management"
+        ]
+      },
+      {
+        "title": "Project Management Assistant",
+        "company": "Q3 Advocacy",
+        "location": "MARSEILLE",
+        "period": "01/2019 – 07/2019",
+        "responsibilities": [
+          "Interface between clients and development team",
+          "Added features to UI/UX community module",
+          "English translation of software",
+          "Monitoring of client needs"
+        ]
+      }
+    ],
+    "currentGoal": "Seeking a 3 to 6-month internship starting May 2025"
+   }
