@@ -9,7 +9,7 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 // Validate environment
-const currentEnvironment = process.env.NODE_ENV || 'development';
+const currentEnvironment = NODE_ENV || 'development';
 const validEnvironments = ['development', 'production', 'test'];
 
 if (!validEnvironments.includes(currentEnvironment)) {
