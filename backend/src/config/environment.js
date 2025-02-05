@@ -34,11 +34,6 @@ const environment = {
 
 const config = environment[currentEnvironment];
 
-
-console.log('Current Environment:', currentEnvironment);
-console.log('Config Errors:', configErrors);
-console.log('API Key exists:', !!environment[currentEnvironment].mistralApiKey);
-
 // Configuration validation
 const validateConfig = (config, env) => {
     const errors = [];
@@ -70,6 +65,13 @@ if (configErrors.length > 0) {
         configErrors.forEach(error => console.warn(`  - ${error}`));
     }
 }
+
+
+console.log('Current Environment:', currentEnvironment);
+
+console.log('API Key exists:', !!environment[currentEnvironment].mistralApiKey);
+
+console.log('Config Errors:', configErrors);
 
 // Freeze configuration to prevent modifications
 const finalConfig = Object.freeze({
