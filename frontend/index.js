@@ -26,7 +26,7 @@ document.addEventListener("submit", async e => {
     })
 
     try {
-        const response = await fetch("http://localhost:3000/api/chat", {
+        const response = await fetch("https://chatbot-mistral.onrender.com/api/endpoint", {
             method: "POST",
             headers: {
                 "Content-type" : "application/json"
