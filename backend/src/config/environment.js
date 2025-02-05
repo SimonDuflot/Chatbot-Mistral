@@ -9,7 +9,7 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 // Validate environment
-const currentEnvironment = NODE_ENV || 'development';
+const currentEnvironment = process.env.NODE_ENV || 'development';
 const validEnvironments = ['development', 'production', 'test'];
 
 if (!validEnvironments.includes(currentEnvironment)) {
@@ -32,6 +32,13 @@ const environment = {
     },
 };
 
+const config = environment[currentEnvironment];
+const configErrors = validateConfig(config, currentEnvironment);
+
+console.log('Current Environment:', currentEnvironment);
+console.log('Config Errors:', configErrors);
+console.log('API Key exists:', !!environment[currentEnvironment].mistralApiKey);
+
 // Configuration validation
 const validateConfig = (config, env) => {
     const errors = [];
@@ -52,9 +59,6 @@ const validateConfig = (config, env) => {
 
     return errors;
 };
-
-const config = environment[currentEnvironment];
-const configErrors = validateConfig(config, currentEnvironment);
 
 if (configErrors.length > 0) {
     if (currentEnvironment === 'production') {
