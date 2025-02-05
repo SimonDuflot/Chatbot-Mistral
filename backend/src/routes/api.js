@@ -1,6 +1,7 @@
 import { Router } from 'express';
 import { body, validationResult } from 'express-validator';
 import { sendMessageToChatbot } from '../services/chat.js';
+import config from '../config/environment.js';
 
 const router = Router();
 
@@ -20,7 +21,7 @@ router.post(
       return res.status(400).json({ errors: errors.array() });
     }
 
-    const apiKey = process.env.MISTRAL_API_KEY;
+    const apiKey = config.MISTRAL_API_KEY;
     if (!apiKey) {
       console.error("API key not found in environment variables");
       return res.status(500).json({ error: "API key not found" });
