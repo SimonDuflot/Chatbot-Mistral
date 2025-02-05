@@ -23,12 +23,11 @@ router.post(
     const { message } = req.body;
 
     try {
-      
+    
       const chatbotResponse = await sendMessageToChatbot(message);
       res.json({ response: chatbotResponse });
-      res.redirect("/");
-    } catch (error) {
       
+    } catch (error) {
       console.error('Error in /chat route:', error);
       res.status(500).json({ error: 'Failed to process message' });
     }
