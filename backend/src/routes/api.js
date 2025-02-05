@@ -20,6 +20,12 @@ router.post(
       return res.status(400).json({ errors: errors.array() });
     }
 
+    const apiKey = process.env.MISTRAL_API_KEY;
+    if (!apiKey) {
+      console.error("API key not found in environment variables");
+      return res.status(500).json({ error: "API key not found" });
+    }
+    
     const { message } = req.body;
 
     try {
