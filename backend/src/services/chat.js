@@ -4,7 +4,7 @@ import fs from 'fs';
 
 const resumeData = JSON.parse(fs.readFileSync('src/context/resume.json', 'utf-8'));
 
-const client = new Mistral({apiKey: config.environment.mistralApiKey});
+const client = new Mistral({apiKey: config.mistralApiKey});
 
 function getResumeContext() {
   let context = 'You are an ai assistant with knowledge of Simon Duflot, an aspiring developer looking for an internship. ' 
