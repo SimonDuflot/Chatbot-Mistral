@@ -1,10 +1,9 @@
 import { Router } from 'express';
-import { body, validationResult } from 'express-validator'; // Moved to top
+import { body, validationResult } from 'express-validator';
 import { sendMessageToChatbot } from '../services/chat.js';
 
 const router = Router();
 
-// Combined /chat route with express-validator
 router.post(
   '/chat',
   [
@@ -27,6 +26,7 @@ router.post(
       
       const chatbotResponse = await sendMessageToChatbot(message);
       res.json({ response: chatbotResponse });
+      res.redirect("/");
     } catch (error) {
       
       console.error('Error in /chat route:', error);
