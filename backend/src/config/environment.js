@@ -1,9 +1,11 @@
 import dotenv from 'dotenv';
 
-// Load environment variables
-const result = dotenv.config();
-if (result.error) {
-    throw new Error('Error loading .env file: ' + result.error.message);
+// Only try to load .env file if not in production
+if (process.env.NODE_ENV !== 'production') {
+    const result = dotenv.config();
+    if (result.error) {
+        throw new Error('Error loading .env file: ' + result.error.message);
+    }
 }
 
 // Validate environment
