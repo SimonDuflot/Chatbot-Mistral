@@ -33,7 +33,7 @@ const environment = {
 };
 
 const config = environment[currentEnvironment];
-const configErrors = validateConfig(config, currentEnvironment);
+
 
 console.log('Current Environment:', currentEnvironment);
 console.log('Config Errors:', configErrors);
@@ -59,6 +59,8 @@ const validateConfig = (config, env) => {
 
     return errors;
 };
+
+const configErrors = validateConfig(config, currentEnvironment);
 
 if (configErrors.length > 0) {
     if (currentEnvironment === 'production') {
